@@ -611,6 +611,14 @@ section {
   opacity: 1;
 }
 
+.hide{
+  display: none;
+}
+
+.portfolio-wrap:hover + .hide{
+  display: block;
+}
+
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
