@@ -83,10 +83,8 @@ h6 {
 }
 
 #header .profile img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border: 3px solid #fff;
+  display: block;
+  margin: 0 auto;
 }
 
 #header .profile h1 {
@@ -1131,5 +1129,6 @@ section {
   background-color: #0056b3; /* Darker blue on hover */
   transform: scale(1.05);
 }
+
 
 
