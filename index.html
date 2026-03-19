@@ -32,20 +32,57 @@
   <!-- adds text labels next to the icon-only portfolio buttons -->
   <!-- ======================================================= -->
   <style>
-    .portfolio-links a {
-      display: inline-flex;
+    /* Override template's hover-only slide-up behaviour */
+    .portfolio .portfolio-wrap .portfolio-links {
+      position: static !important;
+      bottom: auto !important;
+      opacity: 1 !important;
+      background: #040b14;
+      display: flex !important;
+      justify-content: center;
+      gap: 0;
+      padding: 0;
+    }
+    /* Reset template's icon-only sizing */
+    .portfolio .portfolio-wrap .portfolio-links a {
+      width: auto !important;
+      font-size: 13px !important;
+      display: inline-flex !important;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
+      padding: 9px 18px;
+      color: #fff !important;
+      text-decoration: none;
+      flex: 1;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    /* Remove white hover overlay that sits on top of buttons */
+    .portfolio .portfolio-wrap::before {
+      display: none !important;
+    }
+    /* Project title bar */
+    .portfolio-title {
+      background: #040b14;
+      color: #fff;
       font-size: 13px;
-      font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 4px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      padding: 8px 12px;
+      text-align: center;
+      border-top: 1px solid #1a2a3a;
+      letter-spacing: 0.3px;
     }
-    .portfolio-links .portfolio-lightbox {
-      background: rgba(255,255,255,0.15);
-    }
-    .portfolio-links .portfolio-details-link {
-      background: rgba(255,255,255,0.25);
+    .btn-live { background: #149ddd !important; }
+    .btn-live:hover { background: #1187c1 !important; }
+    .btn-github { background: #1e2a3a !important; border-left: 1px solid #37b3ed !important; }
+    .btn-github:hover { background: #2a3f55 !important; }
+    /* Project images consistent height */
+    .portfolio-wrap img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
     }
     /* value pills in About */
     .value-pills {
@@ -85,15 +122,15 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/Latest.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Sathish Manivannan</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://twitter.com/sathish250894" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/sathish.pasapugazh/" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/sathish_pasapugazh/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/sathish-manivannan-4693b720b/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
+  <img src="assets/img/Latest.png" alt="" class="img-fluid rounded-circle" style="width:200px; height:200px; object-fit:cover;">
+  <h1 style="text-align:center; color:#149ddd !important; font-size:20px; margin-top:10px;">Sathish Manivannan</h1>
+  <div class="social-links mt-3 text-center">
+    <a href="https://twitter.com/sathish250894" class="twitter"><i class="bx bxl-twitter"></i></a>
+    <a href="https://www.facebook.com/sathish.pasapugazh/" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="https://www.instagram.com/sathish_pasapugazh/" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/sathish-manivannan-4693b720b/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  </div>
+</div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
@@ -114,7 +151,7 @@
     <div class="hero-container" data-aos="fade-in">
       <h1>Sathish Manivannan</h1>
       <!-- CHANGE 2 — value-focused typed phrases instead of just job titles -->
-      <p>I <span class="typed" data-typed-items="turn raw data into clear decisions., build tools that save hours of manual work., automate what slows your team down., create dashboards that actually get used."></span></p>
+      <p>I <span class="typed" data-typed-items="build tools that save hours of manual work., automate what slows your team down., create dashboards that actually get used."></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -126,7 +163,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Results-driven Data Analyst skilled in building innovative solutions to optimize workflows and data analysis. Experienced in Python, JavaScript, and AI integration for automation and insights. Proficient in developing Chrome extensions, VBA macros, advanced Excel, and dashboards to streamline processes, boost efficiency, and ensure accuracy.</p>
+          <p>Enthusiastic programmer with a strong focus on building innovative solutions to optimize workflows and data-driven processes. Skilled in Python, JavaScript, and AI integration for automation and insights. Experienced in developing Chrome extensions, VBA macros, advanced Excel tools, and dashboards to improve efficiency, accuracy, and productivity.</p>
         </div>
 
         <div class="row">
@@ -134,11 +171,9 @@
             <img src="https://st3.depositphotos.com/3382541/13326/v/450/depositphotos_133260890-stock-illustration-programmer-sitting-on-big-laptop.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Data Analyst &amp; Web Developer.</h3>
+            <h3>Developer</h3>
             <p class="fst-italic">
-              I create successful responsive websites that are fast, easy to use, and built with best practices. The
-              main area of my expertise is front-end development, HTML, CSS, JS, and Python, building small and medium web apps,
-              custom plugins, features, animations, and coding interactive layouts.
+              I design and develop responsive, high-performance websites and web applications that prioritize speed, usability, and clean architecture. Skilled in HTML, CSS, JavaScript, and Python, I build interactive UI components, custom features, and scalable solutions with a focus on performance and user experience.
             </p>
 
             <!-- CHANGE 3 — 3 concrete value pills replacing the generic description -->
@@ -160,17 +195,13 @@
             <div class="row" style="margin-top: 20px;">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>25 August 1994</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>sathishm.netlify.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>6381627161</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>8608000708</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Urappakkam, Chengalpattu</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>27</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BCA (Computer Application)</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sathish250894@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><a href="mailto:sathish250894@gmail.com">sathish250894@gmail.com</a></span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
@@ -183,80 +214,63 @@
     </section><!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
+<section id="skills" class="skills section-bg">
+  <div class="container">
 
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>Since technology advances at the speed of light, anything you learn today could become obsolete tomorrow. I
-            constantly upgrade my skills to stay current with technology. <em>"When we strive to become better than
-            we are, everything around us becomes better too." Paulo Coelho.</em></p>
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p>Since technology advances at the speed of light, anything you learn today could become obsolete tomorrow. I
+        constantly upgrade my skills to stay current with technology. <em>"When we strive to become better than
+        we are, everything around us becomes better too." Paulo Coelho.</em></p>
+    </div>
+
+    <div class="row skills-content">
+
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="progress">
+          <span class="skill">Python <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
 
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
+        <div class="progress">
+          <span class="skill">JavaScript <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+        </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Reactjs <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Nodejs <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Ms Office <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
+        <div class="progress">
+          <span class="skill">Batch <i class="val">50%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+        </div>
+      </div>
 
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="progress">
+          <span class="skill">Excel Formula <i class="val">50%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill">Ms Office <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
 
       </div>
-    </section><!-- End Skills Section -->
 
+    </div>
+
+  </div>
+</section><!-- End Skills Section -->
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
       <div class="container">
@@ -269,11 +283,11 @@
                 <p class="hide">Click Here to Download</p>
                 <img src="assets/img/portfolio/Resume.png" class="img-fluid" alt="">
                 <div class="portfolio-links">
-                  <a href="https://docs.google.com/document/d/1zVQE9CH11ARA2qqMB4i5_3rzItAhytXY/edit?usp=sharing&ouid=107054568964575762893&rtpof=true&sd=true"
+                  <a href="https://docs.google.com/document/d/14Am95lrPEuCIJeaHdY5AkvPxNQZc4HSoKUrHHOXHS4g/edit?usp=sharing"
                     target="_blank"
                     class="download-btn"
-                    title="Click here to Download">
-                    Click Here to Download
+                    title="Click here to view the Resume">
+                    Click here to view the Resume
                   </a>
                 </div>
               </div>
@@ -307,14 +321,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <p class="hide">AI Resume Analyser</p>
-              <img src="assets/img/portfolio/Resume_AI_new.PNG" class="img-fluid" alt="">
+              <img src="assets\img\portfolio\AI_Resume.png" class="img-fluid" alt="AI Resume Analyser">
+              <div class="portfolio-title">AI Resume Analyser</div>
               <div class="portfolio-links">
-                <a href="AI Resume Analyser.html" title="Live Demo" class="portfolio-details-link">
+                <a href="https://resume-yxo6.onrender.com/" target="_blank" title="Live Demo" class="btn-live">
                   <i class="bx bx-link"></i> Live Demo
                 </a>
-                <a href="https://github.com/SathishPasapugazh/Personal_Portfolio/blob/main/AI%20Resume%20Analyser.html"
-                   target="_blank" title="GitHub Source" class="portfolio-lightbox">
+                <a href="https://github.com/SathishPasapugazh/Resume" target="_blank" title="GitHub Source" class="btn-github">
                   <i class="bx bxl-github"></i> GitHub
                 </a>
               </div>
@@ -323,14 +336,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <p class="hide">Keeper App</p>
-              <img src="https://www.google.com/images/icons/product/keep-512.png" class="img-fluid" alt="">
+              <img src="https://coinlaw.io/wp-content/uploads/2025/03/featured-google-pay-statistics-768x432.webp" class="img-fluid" alt="Gpay Spend Tracker">
+              <div class="portfolio-title">Gpay Spend Tracker</div>
               <div class="portfolio-links">
-                <a href="Keeper.html" title="Live Demo" class="portfolio-details-link">
+                <a href="https://gpay-spend-tracker.onrender.com/" target="_blank" title="Live Demo" class="btn-live">
                   <i class="bx bx-link"></i> Live Demo
                 </a>
-                <a href="https://github.com/SathishPasapugazh/Personal_Portfolio/blob/main/Keeper.html"
-                   target="_blank" title="GitHub Source" class="portfolio-lightbox">
+                <a href="https://github.com/SathishPasapugazh/Gpay_Spend_Tracker" target="_blank" title="GitHub Source" class="btn-github">
                   <i class="bx bxl-github"></i> GitHub
                 </a>
               </div>
@@ -339,14 +351,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <p class="hide">Dice Game</p>
-              <img src="assets/img/portfolio/Dice.png" class="img-fluid" alt="">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" class="img-fluid" alt="Stock Watcher">
+              <div class="portfolio-title">Stock Watcher</div>
               <div class="portfolio-links">
-                <a href="Dice.html" title="Live Demo" class="portfolio-details-link">
-                  <i class="bx bx-link"></i> Live Demo
-                </a>
-                <a href="https://github.com/SathishPasapugazh/Personal_Portfolio/blob/main/Dice.html"
-                   target="_blank" title="GitHub Source" class="portfolio-lightbox">
+                <a href="https://github.com/SathishPasapugazh/Stock_App" target="_blank" title="GitHub Source" class="btn-github" style="border-left:none !important;">
                   <i class="bx bxl-github"></i> GitHub
                 </a>
               </div>
@@ -355,14 +363,10 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <p class="hide">Simon Game</p>
-              <img src="assets/img/portfolio/simon-start.PNG" class="img-fluid" alt="">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop" class="img-fluid" alt="Ticket Watcher">
+              <div class="portfolio-title">Ticket Watcher</div>
               <div class="portfolio-links">
-                <a href="simon-game.html" title="Live Demo" class="portfolio-details-link">
-                  <i class="bx bx-link"></i> Live Demo
-                </a>
-                <a href="https://github.com/SathishPasapugazh/Personal_Portfolio/blob/main/simon-game.html"
-                   target="_blank" title="GitHub Source" class="portfolio-lightbox">
+                <a href="https://github.com/SathishPasapugazh/Ticket-Watcher" target="_blank" title="GitHub Source" class="btn-github" style="border-left:none !important;">
                   <i class="bx bxl-github"></i> GitHub
                 </a>
               </div>
@@ -395,13 +399,13 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>sathish250894@gmail.com</p>
+                <p><a href="mailto:sathish250894@gmail.com">sathish250894@gmail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>6381627161</p>
+                <p>8608000708</p>
               </div>
 
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15558.673420929237!2d80.06342321998338!3d12.864684223990041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f6414d7180a7%3A0xfd5b7d45a9e2c181!2sUrapakkam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1659445082165!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -429,15 +433,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
